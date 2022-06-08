@@ -10,12 +10,15 @@ type SeriesData = {
     data: number[];
 }
 
+
+
 type ChartData = {
     labels: {
         categories: string[];
     };
     series: SeriesData[];
 }
+
 
 const BarChart = () => {
 
@@ -31,6 +34,7 @@ const BarChart = () => {
         ]
     });
 
+    
     useEffect(() => {
         axios.get(`${BASE_URL}/sales/success-by-seller`)
             .then(response => {
